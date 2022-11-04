@@ -1,0 +1,32 @@
+:host {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2rem;
+
+  grid-template-areas: 'header header'
+                      'first second';
+
+  justify-self: center;
+  margin: 0 auto;
+  border: solid 2px gray;
+
+  width: 900px;
+  height: 100px;
+
+  justify-items: stretch;
+  justify-content: stretch;
+
+  .header {
+    grid-area: header;
+  }
+
+  .firstCurrency {
+    grid-area: first;
+  }
+
+  .secondCurrency {
+    grid-area: second;
+  }
+
+}
