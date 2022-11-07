@@ -1,11 +1,18 @@
 <!--<router-outlet></router-outlet>-->
-<div class="header">
+<div class="head">
   <app-converter-header></app-converter-header>
 </div>
-
 <div class="firstCurrency">
-  <app-converter-currency-view></app-converter-currency-view>
+  <app-converter-currency-view
+    [inAmount]="firstAmount"
+    (outAmount)="firstAmountChange($event)"
+    (outCurrency)="firstCurrencyChange($event)"
+  ></app-converter-currency-view>
 </div>
 <div class="secondCurrency">
-  <app-converter-currency-view></app-converter-currency-view>
+  <app-converter-currency-view
+    [inAmount]="secondAmount"
+    (outAmount)="secondAmountChange($event)"
+    (outCurrency)="secondCurrencyChange($event)"
+  ></app-converter-currency-view>
 </div>

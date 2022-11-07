@@ -1,0 +1,22 @@
+<div class="selector">
+  <mat-form-field appearance="legacy">
+    <mat-label>Select currency</mat-label>
+    <mat-select (selectionChange)="onChangeCurrency($event)">
+      <mat-option *ngFor="let currency of dataService.nbuStat$ | async" [value]="currency">
+        {{ currency.cc }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div class="myInput">
+  <mat-form-field appearance="legacy" floatLabel="always">
+    <mat-label>Amount</mat-label>
+    <input matInput type="number" class="example-right-align" [value]="inAmount.toString()"
+           (input)="onChangeAmount($event)">
+    <span matPrefix>$&nbsp;</span>
+  </mat-form-field>
+</div>
+
+
+
+

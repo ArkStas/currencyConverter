@@ -2,31 +2,30 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2rem;
+  grid-template-rows: 3rem;
 
-  grid-template-areas: 'header header'
-                      'first second';
+  grid-template-areas: 'head head'
+                      'firstCurrency secondCurrency';
 
   justify-self: center;
   margin: 0 auto;
   border: solid 2px gray;
 
   width: 900px;
-  height: 100px;
+  height: 9rem;
 
-  justify-items: stretch;
-  justify-content: stretch;
+ padding: 1%;
 
   .header {
-    grid-area: header;
+    grid-area: head;
   }
 
   .firstCurrency {
-    grid-area: first;
+    grid-area: firstCurrency;
   }
 
   .secondCurrency {
-    grid-area: second;
+    grid-area: secondCurrency;
   }
 
 }
